@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+X-WR-TIMEZONE:America/Toronto
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DESCRIPTION:Take a short walk outside to get some fresh air and sunlight. This can help regulate your mood and reduce stress levels. Try to focus on your breath and the surroundings\, leaving work-related thoughts behind. Avoid checking your phone or engaging in any strenuous activity.
+DTEND:20260111T230000Z
+DTSTART:20260111T223000Z
+SUMMARY:Morning Walk
+UID:888de19d-035c-409b-ad55-b5e52a0e7759@888d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Prepare a balanced dinner with a focus on whole\, unprocessed foods. Consider an Indian-inspired dish like lentil soup or grilled chicken with roasted vegetables. Eat slowly and mindfully\, avoiding distractions like TV or phones. Try to include some ginger or turmeric to help with digestion and bloating.
+DTEND:20260112T010000Z
+DTSTART:20260112T000000Z
+SUMMARY:Dinner
+UID:d363afb8-67e5-4c14-b91a-cc92cb4b98c5@d363.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Prepare a nutritious breakfast with a balance of protein\, healthy fats\, and complex carbohydrates. Consider an Indian-inspired dish like oatmeal with nuts and fruit or scrambled eggs with whole-grain toast. Eat slowly and mindfully\, savoring each bite. Try to include some probiotics to help with bloating.
+DTEND:20260111T120000Z
+DTSTART:20260111T110000Z
+SUMMARY:Breakfast
+UID:88e4f459-fd83-45d9-ab38-52fd1111cb18@88e4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Engage in a relaxing activity like reading\, meditation\, or listening to calming music. Try to focus on the present moment and let go of any thoughts or worries. Avoid screens and electronic devices to help regulate your circadian rhythms. Take a few moments to reflect on the day's events and plan for the next day.
+DTEND:20260112T020000Z
+DTSTART:20260112T013000Z
+SUMMARY:Wind-down Activity
+UID:fc028b8b-7ec9-4408-9fd5-4d012aac8fd1@fc02.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Engage in a low-intensity exercise like yoga or light stretching to help manage stress and improve flexibility. Focus on gentle movements and deep breathing. Try to listen to calming music or nature sounds to enhance the experience. Avoid any high-impact activities that may exacerbate bloating.
+DTEND:20260111T233000Z
+DTSTART:20260111T230000Z
+SUMMARY:Exercise
+UID:cbb64154-396f-4261-9e79-cfd5fc2c43b4@cbb6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Start the day by drinking a full glass of water to rehydrate after a night of sleep. Take a few minutes to stretch and get out of bed. This will help increase blood flow and energy levels. Try to avoid screens during this time to help regulate your circadian rhythms.
+DTEND:20260111T110000Z
+DTSTART:20260111T103000Z
+SUMMARY:Wake Up and Hydrate
+UID:e69600eb-b6fc-4156-82a7-6418c34ecee6@e696.org
+END:VEVENT
+END:VCALENDAR

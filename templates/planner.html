@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block title %} HerHealthHormone — Create Schedule {% endblock %}
+
+{% block subheading %}  
+Tell us how you're feeling, and we’ll give you a science-informed routine.
+{% endblock %}
+
+
+{% block body %} 
+
+<section id="planner" class="content-box">
+
+    <div class="section">
+        <h2> Start Your Questionnaire </h2>
+    </div>
+
+    <div class="row">
+
+        <div class="field">
+            <label class="label">Time zone</label>
+            <select id="timezone" class="select">
+              <option value="Eastern">Eastern (Toronto)</option>
+              <option value="Pacific"> Pacific (Vancouver)</option>
+              <option value="Mountain">Mountain (Edmonton)</option>
+              <option value="Central">Central (Winnipeg)</option>
+              <option value="Atlantic">Atlantic (Halifax)</option>
+              <option value="Newfoundland">Newfoundland (St. Johns)</option>
+              <option value="Other">Other</option>
+            </select>
+
+        </div>
+        
+        <div class="field">
+            <label class="label">Average # hours slept everyday in past week </label>
+            <input id="sleep" class="input" type="number" placeholder="e.g. 6"/>
+        </div>
+
+    </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="label">Time between meals(including snacks)</label>
+            <input id="time_meal" class="input" type="text" placeholder="3.5 hours"/>
+          </div>
+
+          <div class="field">
+            <label class="label">Number of hours awake until first meal</label>
+            <input id="first_meal" class="input" type="text" placeholder="e.g., 1 hour"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="label">Sufficient protien, fiber, healthy fats everyday?</label>
+            <select id="diet" class="select">
+              <option value="yes_meal">Yes</option>
+              <option value="no_meal">No</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="label">Ethnicity</label>
+            <input id="ethnicity" class="input" type="text" placeholder="South Asian"/>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="field">
+            <label class="label">Number of times excerise per week</label>
+            <input id="times_exercised" class="input" type="text" placeholder="3"/>
+          </div>
+
+          <div class="field">
+            <label class="label">Types of excerise</label>
+            <input id="type_excerise" class="input" type="text" placeholder="Cardio, Yoga"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="label">Duration of excerise</label>
+            <input id="duration_exercised" class="input" type="text" placeholder="1 hour"/>
+          </div>
+
+          <div class="field">
+            <label class="label">Stress Levels</label>
+            <select id="stress" class="select">
+              <option value="low">Low</option>
+              <option value="moderate">Moderate</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="label">Overall mood in past 24 hours</label>
+            <input id="mood" class="input" type="text" placeholder="energetic"/>
+          </div>
+
+          <div class="field">
+            <label class="label">Work/School/Occupied hours</label>
+            <input id="busy_hours" class="input" type="text" placeholder="9am - 5pm"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="label"> Current Medications </label>
+            <input id="meds" class="input" type="text" placeholder="Tylanol"/>
+          </div>
+
+
+          <div class="field">
+            <label class="label">Consistent Water Intake</label>
+            <select id="consistent_water" class="select">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="label">More than 2 Liters of Water per day</label>
+            <select id="enough_water" class="select">
+              <option value="yes2">Yes</option>
+              <option value="no2">No</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="label"> Hours of day feel most fatigued </label>
+            <input id="fatigue" class="input" type="text" placeholder="2pm - 4pm"/>
+          </div>
+        </div>
+
+
+        <div class="field">
+          <label class="label">Your symptoms</label>
+          <textarea id="symptoms" class="textarea" placeholder="Describe what you’re experiencing..."></textarea>
+        </div>
+
+        <button id="generateBtn" class="btn" type="button">Generate personalized schedule (.ics)</button>
+
+        <div id="status" class="status"></div>
+      </div>
+    </section>
+
+  </div>
+
+<script>
+
+// Backend URL
+const API_URL = "http://127.0.0.1:5000/submit_data";
+
+// Handle AI → ICS download
+document.getElementById("generateBtn").addEventListener("click", async () => {
+  const status = document.getElementById("status");
+  status.innerText = "Generating your schedule...";
+  status.className = "status";
+
+  // Storing all values user inputted
+  const data = {
+    timezone: document.getElementById("timezone").value,
+    sleep: document.getElementById("sleep").value,
+    time_meal: document.getElementById("time_meal").value,
+    first_meal: document.getElementById("first_meal").value,
+    diet: document.getElementById("diet").value,
+    ethnicity: document.getElementById("ethnicity").value,
+    times_exercised: document.getElementById("times_exercised").value,
+    type_excerise: document.getElementById("type_excerise").value,
+    duration_exercised: document.getElementById("duration_exercised").value,
+    stress: document.getElementById("stress").value,
+    mood: document.getElementById("mood").value,
+    busy: document.getElementById("busy_hours").value,
+    meds: document.getElementById("meds").value,
+    consistent_water: document.getElementById("consistent_water").value,
+    enough_water: document.getElementById("enough_water").value,
+    fatigue: document.getElementById("fatigue").value,
+    symptoms: document.getElementById("symptoms").value,
+  };
+
+  // Sending values to server 
+  try {
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    const blob = await res.blob();
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${data.name || "schedule"}.ics`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    status.innerText = "Your .ics schedule is downloading!";
+    status.className = "status success";
+
+  } catch (err) {
+    status.innerText = "Error connecting to server.";
+    status.className = "status error";
+  }
+});
+</script>
+
+{%endblock%}
+
+

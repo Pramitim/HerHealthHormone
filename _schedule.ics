@@ -1,0 +1,82 @@
+BEGIN:VCALENDAR
+X-WR-TIMEZONE:America/Toronto
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DESCRIPTION:Engage in activities that bring you joy and help you relax\, such as watching a movie\, playing a game\, or pursuing a hobby. You can also use this time to catch up with friends or family\, or try something new and exciting. Remember to take breaks and stay hydrated to maintain your energy levels.
+DTEND:20260110T220000Z
+DTSTART:20260110T203000Z
+SUMMARY:Leisure Time
+UID:7b271361-5f7c-41c7-aa2f-c22a07dc3c18@7b27.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Engage in activities that bring you joy and help you relax\, such as reading\, listening to music\, or taking a power nap. You can also use this time to catch up with friends or family\, or pursue a hobby that you've been putting off. Remember to stay hydrated and snack on healthy options to maintain your energy levels.
+DTEND:20260110T190000Z
+DTSTART:20260110T171500Z
+SUMMARY:Midday Activities
+UID:cbc4ba5f-322f-4e03-8ea5-d9e79ba92114@cbc4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Prepare for bed by engaging in a calming pre-sleep routine\, such as taking a warm bath\, practicing gentle stretches\, or meditating. Dim the lights\, reduce noise levels\, and cool the temperature to create a sleep-conducive environment. Avoid screens and electronic devices during this time\, instead focusing on relaxation and self-care.
+DTEND:20260111T020000Z
+DTSTART:20260111T010000Z
+SUMMARY:Wind-down Routine
+UID:650a61fa-0fa5-41d4-bc81-15043f28272a@650a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Take a short break to stretch\, move around\, and rest your eyes. Consider taking a short walk outside or doing some light exercises to get your blood flowing. You can also use this time to meditate\, practice deep breathing\, or simply relax and unwind.
+DTEND:20260110T203000Z
+DTSTART:20260110T200000Z
+SUMMARY:Afternoon Break
+UID:f76907fe-091b-45c9-9ac9-9024ef5d412c@f769.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Dedicate this block of time to focusing on your most important tasks or studies\, breaking them down into manageable chunks to maintain productivity. Take short breaks every hour to stretch\, move around\, and rest your eyes to avoid burnout. Prioritize your tasks based on urgency and importance\, and try to tackle the most challenging ones first.
+DTEND:20260110T163000Z
+DTSTART:20260110T141500Z
+SUMMARY:Work/Study Session
+UID:d022df7e-a084-4866-a8e6-a33af713ce4b@d022.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Prepare a nutritious meal\, including a balance of proteins\, healthy fats\, and complex carbohydrates. Consider eating with family or friends\, or trying a new recipe to mix things up. Avoid screens and distractions during this time\, instead opting for conversation and connection.
+DTEND:20260110T230000Z
+DTSTART:20260110T220000Z
+SUMMARY:Dinner
+UID:1c5898e4-47e4-41a2-ab6e-f7c8b4cc72a1@1c58.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Focusing on breathing and slow movements\, start with gentle stretches from head to toe\, spending 10 seconds per repetition and 1 minute per stretch. Move on to some flow sequences\, holding each pose for a few breaths to build flexibility and strength. End the session with some relaxation techniques\, such as deep breathing or meditation\, to calm the mind and set intentions for the day.
+DTEND:20260110T140000Z
+DTSTART:20260110T131500Z
+SUMMARY:Morning Yoga
+UID:2b8dc168-bc49-498d-92ee-63162cff341d@2b8d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Take a break and recharge with a wholesome meal\, including a variety of colorful vegetables\, lean proteins\, and whole grains. Avoid screens and distractions during this time\, instead opting for a book\, conversation\, or simply enjoying your food. Consider taking a short walk outside after lunch to get some fresh air and sunlight.
+DTEND:20260110T171500Z
+DTSTART:20260110T163000Z
+SUMMARY:Lunch
+UID:150251ca-5cec-4355-ad0e-467e9a5d8ad1@1502.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Begin the day with a nutritious meal\, including a balance of proteins\, carbohydrates\, and healthy fats. Consider eating oatmeal with fruits and nuts\, or scrambled eggs with whole-grain toast. Stay hydrated by drinking a glass of water or a freshly squeezed juice. Aim to eat slowly and mindfully to kick-start your metabolism.
+DTEND:20260110T130000Z
+DTSTART:20260110T123000Z
+SUMMARY:Breakfast
+UID:6632eabb-0607-4f22-ad88-525aafe96ed2@6632.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Return to your tasks or studies\, refocusing your attention and tackling any remaining challenges. Try to avoid multitasking and minimize distractions\, instead dedicating your attention to a single task at a time. Take breaks as needed to refresh your mind and maintain your productivity.
+DTEND:20260110T200000Z
+DTSTART:20260110T190000Z
+SUMMARY:Work/Study Session
+UID:1f497cf0-7193-4ca3-bd91-027d760d0b2b@1f49.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Wind down and relax after dinner\, engaging in activities that calm your mind and soothe your body. Consider practicing yoga\, reading a book\, or listening to calming music. Avoid screens and electronic devices during this time\, instead opting for relaxation and self-care.
+DTEND:20260111T010000Z
+DTSTART:20260110T230000Z
+SUMMARY:Evening Relaxation
+UID:01ca7236-3443-45b5-802e-bb970ddddb08@01ca.org
+END:VEVENT
+END:VCALENDAR
