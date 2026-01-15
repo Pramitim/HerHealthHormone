@@ -39,7 +39,7 @@ def create_app():
 
         # File path (temporary)
         filename = f"{data.get('name', 'user')}_schedule.ics"
-        filepath = os.path.join(os.getcwd(), filename)
+        filepath = os.path.join("/tmp", filename)
 
         # Save ICS to temporary directory
         with open(filepath, "w", encoding="utf-8") as f:
