@@ -138,6 +138,13 @@
     .textarea { 
         min-height:100px; 
     }  
+
+    .input, .textarea, .select {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
   
   
     .status { 
@@ -170,4 +177,7 @@
       .footer { flex-direction: column; gap: 10px; }
       .content-box { padding: 36px 24px; }
       .form-box { padding: 36px 24px; }
+
+      /* form boxes stack vertically for phones */
+      .row { grid-template-columns: 1fr;}
     }
